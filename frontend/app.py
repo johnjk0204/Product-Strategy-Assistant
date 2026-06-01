@@ -3,13 +3,14 @@ Streamlit frontend for the AI-Powered Product Strategy Assistant.
 Connects to the FastAPI backend at http://localhost:8000.
 """
 
+import os
 import time
 from pathlib import Path
 
 import requests
 import streamlit as st
 
-API = "http://localhost:8000"
+API = os.getenv("BACKEND_URL", "http://localhost:8000")
 SAMPLE_CSV = Path(__file__).parent.parent / "data" / "sample" / "sample_sales_data.csv"
 
 # ---------------------------------------------------------------------------
