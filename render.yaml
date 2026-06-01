@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: product-strategy-backend
+    env: python
+    rootDir: backend
+    buildCommand: pip install -r ../requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_BASE_URL
+        value: https://keygateway.arshnivlabs.com/v1
+      - key: MODEL_NAME
+        value: gpt-4o-mini
+      - key: EMBEDDING_MODEL
+        value: text-embedding-3-small
+
+  - type: web
+    name: product-strategy-frontend
+    env: python
+    rootDir: frontend
+    buildCommand: pip install -r ../requirements.txt
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true
+    envVars:
+      - key: BACKEND_URL
+        sync: false
