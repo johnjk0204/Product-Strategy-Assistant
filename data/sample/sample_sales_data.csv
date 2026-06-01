@@ -1,0 +1,121 @@
+Date,Product_ID,Product_Name,Category,Region,Units_Sold,Revenue_USD,Cost_USD,Profit_USD,Marketing_Spend_USD,Customer_Rating,Returns,New_Customers,Review
+2026-01-01,P002,FitBand Pro,Wearables,North,190,22800,12628.38,10171.62,1553.59,3.9,8,32,Had some issues after purchase.
+2026-01-02,P010,Laptop Air,Electronics,West,66,52800,26746.12,26053.88,4140.73,4.4,0,60,Decent quality for the price.
+2026-01-03,P009,Tablet Lite,Electronics,West,162,40500,24252.45,16247.55,3489.67,4.8,2,118,"Excellent product, highly recommend."
+2026-01-04,P006,Wireless Keyboard,Accessories,East,129,14190,7767.17,6422.83,2117.92,3.9,3,34,Not satisfied with the build quality.
+2026-01-05,P006,Wireless Keyboard,Accessories,East,185,20350,13788.51,6561.49,2948.01,4.4,6,30,Decent quality for the price.
+2026-01-06,P009,Tablet Lite,Electronics,East,235,58750,36837.28,21912.72,8318.67,3.9,3,84,Not satisfied with the build quality.
+2026-01-07,P002,FitBand Pro,Wearables,South,101,12120,7073.57,5046.43,1320.39,4.8,1,104,Very satisfied with the performance.
+2026-01-08,P006,Wireless Keyboard,Accessories,South,186,20460,13389.03,7070.97,2841.1,3.9,2,146,Customer support could be better.
+2026-01-09,P004,PowerBank Max,Accessories,South,286,22880,13350.03,9529.97,4087.24,4.6,8,66,Very satisfied with the performance.
+2026-01-10,P006,Wireless Keyboard,Accessories,North,167,18370,12506.23,5863.77,2841.03,4.3,1,64,Average experience so far.
+2026-01-11,P010,Laptop Air,Electronics,East,158,126400,81426.44,44973.56,12821.02,4.9,7,46,Great value for money.
+2026-01-12,P005,Gaming Mouse Pro,Accessories,South,176,15840,10516.14,5323.86,1901.86,4.7,6,112,Great value for money.
+2026-01-13,P006,Wireless Keyboard,Accessories,South,120,13200,8079.66,5120.34,816.0,3.9,0,49,Would not buy again.
+2026-01-14,P003,NoiseBuds Air,Audio,West,82,8200,4794.12,3405.88,1045.22,4.4,2,12,Average experience so far.
+2026-01-15,P002,FitBand Pro,Wearables,Central,186,22320,14934.13,7385.87,2103.05,4.2,2,126,Functional and practical.
+2026-01-16,P001,SmartWatch X,Wearables,East,306,45900,30644.29,15255.71,5324.34,3.9,9,139,Had some issues after purchase.
+2026-01-17,P010,Laptop Air,Electronics,South,128,102400,59623.53,42776.47,7270.54,4.9,4,10,Great value for money.
+2026-01-18,P010,Laptop Air,Electronics,East,300,240000,121028.37,118971.63,40987.88,4.9,9,71,Great value for money.
+2026-01-19,P001,SmartWatch X,Wearables,South,340,51000,36124.77,14875.23,3117.88,4.4,2,146,Good overall but has room for improvement.
+2026-01-20,P003,NoiseBuds Air,Audio,South,293,29300,20753.39,8546.61,2093.97,4.4,9,118,Functional and practical.
+2026-01-21,P004,PowerBank Max,Accessories,Central,152,12160,7987.28,4172.72,1238.73,4.6,5,122,Easy to use and reliable.
+2026-01-22,P009,Tablet Lite,Electronics,West,111,27750,15388.46,12361.54,1618.47,3.8,4,68,Would not buy again.
+2026-01-23,P010,Laptop Air,Electronics,South,53,42400,21862.22,20537.78,5598.64,4.1,0,94,Works as expected.
+2026-01-24,P002,FitBand Pro,Wearables,Central,171,20520,11517.16,9002.84,2320.89,4.4,7,72,Average experience so far.
+2026-01-25,P008,Security Camera,Smart Home,West,147,26460,13779.09,12680.91,3589.77,4.2,6,129,Functional and practical.
+2026-01-26,P001,SmartWatch X,Wearables,North,81,12150,7151.21,4998.79,1143.43,4.8,1,59,Great value for money.
+2026-01-27,P004,PowerBank Max,Accessories,Central,279,22320,11848.35,10471.65,1648.41,4.4,13,29,Works as expected.
+2026-01-28,P008,Security Camera,Smart Home,Central,100,18000,9200.33,8799.67,3238.32,4.8,0,70,Easy to use and reliable.
+2026-01-29,P003,NoiseBuds Air,Audio,West,298,29800,18055.79,11744.21,4839.66,4.9,2,107,Very satisfied with the performance.
+2026-01-30,P001,SmartWatch X,Wearables,West,185,27750,19531.39,8218.61,4219.85,4.1,8,134,Average experience so far.
+2026-01-31,P003,NoiseBuds Air,Audio,South,201,20100,11012.67,9087.33,1157.82,4.7,0,90,Very satisfied with the performance.
+2026-02-01,P001,SmartWatch X,Wearables,North,349,52350,31666.17,20683.83,8874.39,4.4,1,140,Good overall but has room for improvement.
+2026-02-02,P002,FitBand Pro,Wearables,South,85,10200,6435.26,3764.74,1405.33,4.1,0,73,Average experience so far.
+2026-02-03,P010,Laptop Air,Electronics,Central,70,56000,35630.78,20369.22,5851.96,4.5,2,76,Very satisfied with the performance.
+2026-02-04,P004,PowerBank Max,Accessories,East,172,13760,7684.07,6075.93,922.12,4.6,7,90,Exceeded my expectations.
+2026-02-05,P002,FitBand Pro,Wearables,North,284,34080,21697.2,12382.8,4198.29,3.9,8,64,Had some issues after purchase.
+2026-02-06,P009,Tablet Lite,Electronics,East,117,29250,20630.52,8619.48,4811.99,4.9,2,82,"Excellent product, highly recommend."
+2026-02-07,P003,NoiseBuds Air,Audio,West,328,32800,21476.74,11323.26,4248.19,5.0,16,12,Easy to use and reliable.
+2026-02-08,P009,Tablet Lite,Electronics,East,103,25750,18194.04,7555.96,1737.04,3.9,0,49,Customer support could be better.
+2026-02-09,P005,Gaming Mouse Pro,Accessories,East,157,14130,9295.77,4834.23,1080.49,4.6,4,139,Exceeded my expectations.
+2026-02-10,P008,Security Camera,Smart Home,East,76,13680,7117.78,6562.22,1437.29,4.1,0,95,Decent quality for the price.
+2026-02-11,P003,NoiseBuds Air,Audio,East,132,13200,8752.53,4447.47,1606.68,4.3,0,38,Average experience so far.
+2026-02-12,P002,FitBand Pro,Wearables,South,329,39480,20052.93,19427.07,3868.96,4.5,13,42,Very satisfied with the performance.
+2026-02-13,P001,SmartWatch X,Wearables,East,236,35400,24701.27,10698.73,5433.75,4.8,5,63,Easy to use and reliable.
+2026-02-14,P004,PowerBank Max,Accessories,North,231,18480,12411.64,6068.36,3048.05,4.3,9,49,Decent quality for the price.
+2026-02-15,P004,PowerBank Max,Accessories,South,140,11200,7771.81,3428.19,596.09,4.7,5,115,Great value for money.
+2026-02-16,P004,PowerBank Max,Accessories,East,131,10480,7055.37,3424.63,671.27,4.8,6,130,Easy to use and reliable.
+2026-02-17,P004,PowerBank Max,Accessories,South,285,22800,13153.89,9646.11,3572.07,4.8,3,16,Easy to use and reliable.
+2026-02-18,P004,PowerBank Max,Accessories,West,218,17440,9788.94,7651.06,1029.39,4.7,5,140,"Excellent product, highly recommend."
+2026-02-19,P007,Smart Speaker,Smart Home,Central,219,30660,21665.34,8994.66,1992.73,5.0,2,77,Great value for money.
+2026-02-20,P001,SmartWatch X,Wearables,North,272,40800,23502.89,17297.11,6211.22,4.3,8,39,Average experience so far.
+2026-02-21,P007,Smart Speaker,Smart Home,Central,147,20580,11443.28,9136.72,2925.28,3.8,3,103,Would not buy again.
+2026-02-22,P007,Smart Speaker,Smart Home,North,219,30660,19533.31,11126.69,4177.13,3.9,4,139,Customer support could be better.
+2026-02-23,P005,Gaming Mouse Pro,Accessories,West,217,19530,11493.95,8036.05,1727.14,4.0,6,107,Functional and practical.
+2026-02-24,P003,NoiseBuds Air,Audio,Central,341,34100,19307.73,14792.27,4134.01,3.8,9,63,Customer support could be better.
+2026-02-25,P007,Smart Speaker,Smart Home,Central,214,29960,18044.83,11915.17,3220.12,4.1,7,53,Decent quality for the price.
+2026-02-26,P002,FitBand Pro,Wearables,East,313,37560,24265.56,13294.44,4901.73,3.9,7,89,Not satisfied with the build quality.
+2026-02-27,P004,PowerBank Max,Accessories,South,125,10000,5053.74,4946.26,818.3,4.4,6,28,Average experience so far.
+2026-02-28,P008,Security Camera,Smart Home,West,344,61920,33608.67,28311.33,8701.37,4.4,7,47,Decent quality for the price.
+2026-03-01,P001,SmartWatch X,Wearables,North,267,40050,21953.21,18096.79,6189.1,4.6,7,22,"Excellent product, highly recommend."
+2026-03-02,P009,Tablet Lite,Electronics,South,112,28000,16811.8,11188.2,4317.16,4.6,4,91,Exceeded my expectations.
+2026-03-03,P008,Security Camera,Smart Home,Central,308,55440,32924.87,22515.13,9307.88,4.3,5,131,Good overall but has room for improvement.
+2026-03-04,P008,Security Camera,Smart Home,East,176,31680,21693.51,9986.49,2726.08,4.7,7,71,Exceeded my expectations.
+2026-03-05,P005,Gaming Mouse Pro,Accessories,West,89,8010,5262.41,2747.59,644.68,4.2,4,30,Average experience so far.
+2026-03-06,P003,NoiseBuds Air,Audio,South,168,16800,9815.7,6984.3,1173.73,4.1,6,114,Decent quality for the price.
+2026-03-07,P006,Wireless Keyboard,Accessories,Central,288,31680,18737.78,12942.22,2435.83,4.3,14,15,Works as expected.
+2026-03-08,P010,Laptop Air,Electronics,West,294,235200,117905.09,117294.91,22515.38,4.7,13,117,Exceeded my expectations.
+2026-03-09,P009,Tablet Lite,Electronics,Central,162,40500,24600.12,15899.88,3462.0,4.4,6,96,Decent quality for the price.
+2026-03-10,P007,Smart Speaker,Smart Home,South,289,40460,28415.02,12044.98,7181.4,4.4,14,110,Works as expected.
+2026-03-11,P010,Laptop Air,Electronics,Central,63,50400,26130.81,24269.19,5328.27,4.8,1,22,Great value for money.
+2026-03-12,P005,Gaming Mouse Pro,Accessories,West,217,19530,10674.42,8855.58,1806.33,4.7,6,81,Exceeded my expectations.
+2026-03-13,P007,Smart Speaker,Smart Home,East,91,12740,7688.18,5051.82,1877.53,3.9,2,67,Customer support could be better.
+2026-03-14,P002,FitBand Pro,Wearables,North,65,7800,5529.53,2270.47,592.15,3.8,1,71,Had some issues after purchase.
+2026-03-15,P003,NoiseBuds Air,Audio,West,108,10800,6739.99,4060.01,846.02,4.6,2,52,"Excellent product, highly recommend."
+2026-03-16,P010,Laptop Air,Electronics,Central,108,86400,57984.27,28415.73,6159.42,4.2,4,16,Good overall but has room for improvement.
+2026-03-17,P005,Gaming Mouse Pro,Accessories,Central,242,21780,12790.61,8989.39,3113.49,3.9,11,72,Customer support could be better.
+2026-03-18,P002,FitBand Pro,Wearables,East,111,13320,8993.26,4326.74,1645.97,3.8,4,119,Performance was below expectations.
+2026-03-19,P006,Wireless Keyboard,Accessories,North,309,33990,21837.2,12152.8,1755.41,4.3,15,37,Good overall but has room for improvement.
+2026-03-20,P007,Smart Speaker,Smart Home,East,285,39900,26158.76,13741.24,4253.87,4.7,10,79,Exceeded my expectations.
+2026-03-21,P010,Laptop Air,Electronics,Central,297,237600,143099.88,94500.12,37385.29,4.5,5,72,Very satisfied with the performance.
+2026-03-22,P002,FitBand Pro,Wearables,East,280,33600,18602.64,14997.36,3709.85,4.5,6,96,Great value for money.
+2026-03-23,P001,SmartWatch X,Wearables,West,216,32400,17496.15,14903.85,2513.45,4.8,5,81,"Excellent product, highly recommend."
+2026-03-24,P010,Laptop Air,Electronics,East,334,267200,134196.72,133003.28,46291.9,3.9,13,135,Customer support could be better.
+2026-03-25,P009,Tablet Lite,Electronics,South,293,73250,47033.73,26216.27,8336.35,4.8,1,85,Very satisfied with the performance.
+2026-03-26,P004,PowerBank Max,Accessories,West,174,13920,7897.73,6022.27,1748.38,4.4,8,98,Average experience so far.
+2026-03-27,P007,Smart Speaker,Smart Home,Central,219,30660,17703.03,12956.97,3341.54,4.2,3,40,Works as expected.
+2026-03-28,P004,PowerBank Max,Accessories,East,111,8880,5891.29,2988.71,1541.69,4.6,1,65,Great value for money.
+2026-03-29,P008,Security Camera,Smart Home,East,318,57240,36135.27,21104.73,10158.18,4.8,9,68,Great value for money.
+2026-03-30,P006,Wireless Keyboard,Accessories,South,204,22440,11289.85,11150.15,2680.18,4.1,0,84,Functional and practical.
+2026-03-31,P003,NoiseBuds Air,Audio,West,102,10200,7058.38,3141.62,1271.21,4.4,3,97,Decent quality for the price.
+2026-04-01,P003,NoiseBuds Air,Audio,North,179,17900,12655.91,5244.09,2006.68,4.8,6,135,Exceeded my expectations.
+2026-04-02,P002,FitBand Pro,Wearables,Central,77,9240,4928.43,4311.57,1436.34,4.9,0,73,Exceeded my expectations.
+2026-04-03,P002,FitBand Pro,Wearables,Central,263,31560,19989.78,11570.22,4822.25,4.1,8,107,Decent quality for the price.
+2026-04-04,P008,Security Camera,Smart Home,West,202,36360,25060.65,11299.35,6497.68,4.2,9,25,Works as expected.
+2026-04-05,P010,Laptop Air,Electronics,North,156,124800,79574.14,45225.86,10533.62,3.9,3,54,Customer support could be better.
+2026-04-06,P009,Tablet Lite,Electronics,North,130,32500,16269.13,16230.87,3528.38,4.5,2,18,Easy to use and reliable.
+2026-04-07,P004,PowerBank Max,Accessories,East,194,15520,10160.28,5359.72,1692.05,4.6,4,60,Very satisfied with the performance.
+2026-04-08,P007,Smart Speaker,Smart Home,North,328,45920,25231.11,20688.89,3185.41,4.1,4,28,Decent quality for the price.
+2026-04-09,P001,SmartWatch X,Wearables,South,207,31050,19589.75,11460.25,4879.55,4.9,7,41,"Excellent product, highly recommend."
+2026-04-10,P008,Security Camera,Smart Home,East,256,46080,32596.47,13483.53,5302.03,4.4,1,20,Average experience so far.
+2026-04-11,P007,Smart Speaker,Smart Home,East,178,24920,12601.8,12318.2,1987.62,4.6,0,78,"Excellent product, highly recommend."
+2026-04-12,P010,Laptop Air,Electronics,North,139,111200,67110.33,44089.67,14978.22,4.9,1,121,Great value for money.
+2026-04-13,P008,Security Camera,Smart Home,North,290,52200,30095.98,22104.02,4871.83,4.6,13,51,Great value for money.
+2026-04-14,P006,Wireless Keyboard,Accessories,West,303,33330,18778.39,14551.61,5761.93,4.8,1,126,Easy to use and reliable.
+2026-04-15,P002,FitBand Pro,Wearables,East,179,21480,12267.66,9212.34,3783.14,4.3,8,10,Functional and practical.
+2026-04-16,P009,Tablet Lite,Electronics,West,261,65250,33403.1,31846.9,7660.16,4.5,7,123,Very satisfied with the performance.
+2026-04-17,P001,SmartWatch X,Wearables,South,186,27900,17321.11,10578.89,4759.67,4.3,7,41,Good overall but has room for improvement.
+2026-04-18,P001,SmartWatch X,Wearables,Central,172,25800,16928.73,8871.27,2332.26,3.8,6,33,Performance was below expectations.
+2026-04-19,P004,PowerBank Max,Accessories,North,286,22880,16207.12,6672.88,3070.55,4.0,14,84,Good overall but has room for improvement.
+2026-04-20,P009,Tablet Lite,Electronics,East,262,65500,44778.37,20721.63,11621.78,4.1,8,47,Decent quality for the price.
+2026-04-21,P007,Smart Speaker,Smart Home,South,310,43400,28825.6,14574.4,2940.18,3.9,13,97,Would not buy again.
+2026-04-22,P009,Tablet Lite,Electronics,East,51,12750,7168.36,5581.64,1132.36,4.5,2,135,"Excellent product, highly recommend."
+2026-04-23,P003,NoiseBuds Air,Audio,West,325,32500,19713.04,12786.96,3029.56,4.7,12,126,Easy to use and reliable.
+2026-04-24,P006,Wireless Keyboard,Accessories,South,172,18920,11840.05,7079.95,1520.47,4.7,0,91,Very satisfied with the performance.
+2026-04-25,P008,Security Camera,Smart Home,West,247,44460,31897.88,12562.12,6802.88,4.6,2,136,Very satisfied with the performance.
+2026-04-26,P001,SmartWatch X,Wearables,South,307,46050,32805.0,13245.0,4289.99,3.9,14,35,Would not buy again.
+2026-04-27,P009,Tablet Lite,Electronics,West,57,14250,9389.86,4860.14,1471.99,4.6,0,29,Easy to use and reliable.
+2026-04-28,P008,Security Camera,Smart Home,East,223,40140,25573.88,14566.12,4081.15,3.9,5,146,Customer support could be better.
+2026-04-29,P007,Smart Speaker,Smart Home,East,299,41860,28963.95,12896.05,2288.36,3.9,10,83,Not satisfied with the build quality.
+2026-04-30,P004,PowerBank Max,Accessories,North,272,21760,15563.5,6196.5,3238.93,4.6,1,123,Great value for money.
