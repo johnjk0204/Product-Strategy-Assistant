@@ -2,9 +2,8 @@ services:
   - type: web
     name: product-strategy-backend
     env: python
-    rootDir: backend
-    buildCommand: pip install -r ../requirements.txt
-    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn server:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: OPENAI_API_KEY
         sync: false
@@ -18,9 +17,8 @@ services:
   - type: web
     name: product-strategy-frontend
     env: python
-    rootDir: frontend
-    buildCommand: pip install -r ../requirements.txt
-    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run frontend/app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true
     envVars:
       - key: BACKEND_URL
         sync: false
