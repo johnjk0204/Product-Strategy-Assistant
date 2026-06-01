@@ -124,6 +124,66 @@ def _get(endpoint: str, **kwargs):
 
 
 # ---------------------------------------------------------------------------
+# Persistent chat panel (used in both pre- and post-analysis views)
+# ---------------------------------------------------------------------------
+
+def _render_chat_panel():
+    st.markdown(
+        """
+        <div style="background:#1a3a5c;border-radius:12px;padding:14px 16px 8px 16px;margin-bottom:8px;">
+            <span style="color:#fff;font-size:1.1rem;font-weight:700;">💬 AI Strategy Assistant</span><br>
+            <span style="color:#a8c4d8;font-size:0.8rem;">Ask anything about your data or analysis</span>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    chat_box = st.container(height=480)
+    with chat_box:
+        if not st.session_state.chat_history:
+            st.markdown(
+                "<div style='color:#888;font-size:0.85rem;text-align:center;padding-top:180px;'>"
+                "Ask a question to get started</div>",
+                unsafe_allow_html=True,
+            )
+        for msg in st.session_state.chat_history:
+            with st.chat_message(msg["role"]):
+                st.markdown(msg["content"])
+
+    with st.form("chat_form", clear_on_submit=True):
+        user_input = st.text_input(
+            "Message",
+            placeholder="e.g. Which product has the highest profit margin?",
+            label_visibility="collapsed",
+        )
+        send = st.form_submit_button("Send ➤", use_container_width=True)
+
+    if send and user_input.strip():
+        if not st.session_state.session_id:
+            st.warning("Upload data first.")
+        else:
+            st.session_state.chat_history.append({"role": "user", "content": user_input})
+            with st.spinner("Thinking…"):
+                result = _post(
+                    "/api/chat",
+                    json={
+                        "session_id": st.session_state.session_id,
+                        "message": user_input,
+                        "chat_history": st.session_state.chat_history[:-1],
+                    },
+                )
+            if result:
+                reply = result.get("response", "Sorry, I could not generate a response.")
+                st.session_state.chat_history.append({"role": "assistant", "content": reply})
+            st.rerun()
+
+    if st.session_state.chat_history:
+        if st.button("🗑 Clear chat", use_container_width=True):
+            st.session_state.chat_history = []
+            st.rerun()
+
+
+# ---------------------------------------------------------------------------
 # Header
 # ---------------------------------------------------------------------------
 st.markdown(
@@ -282,101 +342,75 @@ if not st.session_state.files_uploaded:
             st.info(f"**{label}**\n{example}")
 
 elif not st.session_state.analysis_done:
-    st.info(
-        "✅ Files uploaded and indexed. Click **Run Full Analysis** in the sidebar to start the 7-agent pipeline."
-    )
-    st.markdown("#### Session Summary")
-    resp = _get(f"/api/status/{st.session_state.session_id}")
-    if resp:
-        data = resp.json()
-        m1, m2 = st.columns(2)
-        m1.metric("Files Uploaded", len(data.get("files", [])))
-        m2.metric("Text Chunks Indexed", data.get("total_chunks", 0))
-        if data.get("files"):
-            st.markdown("**Uploaded files:**")
-            for f in data["files"]:
-                st.markdown(f"- `{f['filename']}` — {f['chunks']} chunks")
+    left_col, right_col = st.columns([6, 4])
+
+    with left_col:
+        st.info("✅ Files uploaded and indexed. Click **Run Full Analysis** in the sidebar to start the 9-agent pipeline.")
+        st.markdown("#### Session Summary")
+        resp = _get(f"/api/status/{st.session_state.session_id}")
+        if resp:
+            data = resp.json()
+            m1, m2 = st.columns(2)
+            m1.metric("Files Uploaded", len(data.get("files", [])))
+            m2.metric("Text Chunks Indexed", data.get("total_chunks", 0))
+            if data.get("files"):
+                st.markdown("**Uploaded files:**")
+                for f in data["files"]:
+                    st.markdown(f"- `{f['filename']}` — {f['chunks']} chunks")
+
+    with right_col:
+        _render_chat_panel()
 
 else:
     # -------------------------------------------------------------------------
-    # Analysis results
+    # Analysis results — split layout
     # -------------------------------------------------------------------------
     analysis = st.session_state.analysis or {}
 
-    # Quick-glance metrics
-    m1, m2, m3, m4 = st.columns(4)
-    m1.markdown('<div class="metric-card"><div class="metric-value">9</div><div class="metric-label">AI Agents Run</div></div>', unsafe_allow_html=True)
-    m2.markdown('<div class="metric-card"><div class="metric-value">✅</div><div class="metric-label">Analysis Complete</div></div>', unsafe_allow_html=True)
-    m3.markdown('<div class="metric-card"><div class="metric-value">8</div><div class="metric-label">Reports Generated</div></div>', unsafe_allow_html=True)
-    m4.markdown('<div class="metric-card"><div class="metric-value">PDF</div><div class="metric-label">Report Ready</div></div>', unsafe_allow_html=True)
+    left_col, right_col = st.columns([6, 4])
 
-    st.markdown("<br>", unsafe_allow_html=True)
+    with left_col:
+        # Quick-glance metrics
+        m1, m2, m3, m4 = st.columns(4)
+        m1.markdown('<div class="metric-card"><div class="metric-value">9</div><div class="metric-label">AI Agents Run</div></div>', unsafe_allow_html=True)
+        m2.markdown('<div class="metric-card"><div class="metric-value">✅</div><div class="metric-label">Analysis Complete</div></div>', unsafe_allow_html=True)
+        m3.markdown('<div class="metric-card"><div class="metric-value">8</div><div class="metric-label">Reports Generated</div></div>', unsafe_allow_html=True)
+        m4.markdown('<div class="metric-card"><div class="metric-value">PDF</div><div class="metric-label">Report Ready</div></div>', unsafe_allow_html=True)
 
-    tabs = st.tabs([
-        "📋 Executive Summary",
-        "👥 Customer Insights",
-        "📈 Market Research",
-        "🏢 Competitor Analysis",
-        "⚖️ SWOT Analysis",
-        "🔍 Opportunity Assessment",
-        "🎯 Feature Priorities",
-        "🗺️ Product Roadmap",
-        "🧭 Strategic Plan",
-        "💬 Chat",
-    ])
+        st.markdown("<br>", unsafe_allow_html=True)
 
-    def _render(tab, key, placeholder="Analysis not available."):
-        with tab:
-            content = analysis.get(key, "")
-            if content:
-                st.markdown(content)
-            else:
-                st.warning(placeholder)
+        tabs = st.tabs([
+            "📋 Executive Summary",
+            "👥 Customer Insights",
+            "📈 Market Research",
+            "🏢 Competitor Analysis",
+            "⚖️ SWOT Analysis",
+            "🔍 Opportunity Assessment",
+            "🎯 Feature Priorities",
+            "🗺️ Product Roadmap",
+            "🧭 Strategic Plan",
+        ])
 
-    _render(tabs[0], "executive_summary")
-    _render(tabs[1], "customer_insights")
-    _render(tabs[2], "market_research")
-    _render(tabs[3], "competitor_analysis")
-    _render(tabs[4], "swot_analysis")
-    _render(tabs[5], "opportunity_assessment")
-    _render(tabs[6], "feature_priorities")
-    _render(tabs[7], "product_roadmap")
-    _render(tabs[8], "strategy_recommendations")
+        def _render(tab, key, placeholder="Analysis not available."):
+            with tab:
+                content = analysis.get(key, "")
+                if content:
+                    st.markdown(content)
+                else:
+                    st.warning(placeholder)
 
-    # -------------------------------------------------------------------------
-    # Chat tab
-    # -------------------------------------------------------------------------
-    with tabs[9]:
-        st.markdown("### 💬 Ask the AI Strategy Assistant")
-        st.caption("Ask any question about your data, the analysis results, or product strategy.")
+        _render(tabs[0], "executive_summary")
+        _render(tabs[1], "customer_insights")
+        _render(tabs[2], "market_research")
+        _render(tabs[3], "competitor_analysis")
+        _render(tabs[4], "swot_analysis")
+        _render(tabs[5], "opportunity_assessment")
+        _render(tabs[6], "feature_priorities")
+        _render(tabs[7], "product_roadmap")
+        _render(tabs[8], "strategy_recommendations")
 
-        chat_container = st.container(height=420)
-        with chat_container:
-            for msg in st.session_state.chat_history:
-                with st.chat_message(msg["role"]):
-                    st.markdown(msg["content"])
-
-        if prompt := st.chat_input("e.g. Which product has the best profit margin?"):
-            st.session_state.chat_history.append({"role": "user", "content": prompt})
-            with chat_container:
-                with st.chat_message("user"):
-                    st.markdown(prompt)
-
-            with st.spinner("Thinking…"):
-                result = _post(
-                    "/api/chat",
-                    json={
-                        "session_id": st.session_state.session_id,
-                        "message": prompt,
-                        "chat_history": st.session_state.chat_history[:-1],
-                    },
-                )
-            if result:
-                reply = result.get("response", "Sorry, I could not generate a response.")
-                st.session_state.chat_history.append({"role": "assistant", "content": reply})
-                with chat_container:
-                    with st.chat_message("assistant"):
-                        st.markdown(reply)
+    with right_col:
+        _render_chat_panel()
 
 
 # ---------------------------------------------------------------------------
